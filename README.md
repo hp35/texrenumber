@@ -28,13 +28,13 @@ Internally, the `texrenumber.sh` script makes use of the `AWK` scripting
 language as the primary engine of parsing and replacing tags and
 cross-references, and the script makes two distinct passes over the input:
 
-     1. The first pass records every equation tag and constructs an
-        old-tag -> new-tag mapping.
-     2. The second pass applies this mapping to both equation definitions
-        and cross-references. This ensures that references are replaced
-        consistently regardless of where they occur in the manuscript,
-        and also allows several equation commands to occur on the same
-        source line.
+1. The first pass records every equation tag and constructs an
+   old-tag -> new-tag mapping.
+2. The second pass applies this mapping to both equation definitions
+   and cross-references. This ensures that references are replaced
+   consistently regardless of where they occur in the manuscript,
+   and also allows several equation commands to occur on the same
+   source line.
 
 The script aborts if duplicate equation tags are encountered or if a `\eqsubdef`
 cannot be associated with a preceding `\eqdefn`, rather than risking ambiguous
