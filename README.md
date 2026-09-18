@@ -46,6 +46,13 @@ In this example, the original opatheory.tex is left unchanged and leaves it up
 to the user to replace the original file or not (just as a safety, just in case
 there are any nasty bugs lurking around in the present bash script).
 
+## Installation
+In order to install the script including a symbolic link `texrenumber` to the
+default directory `/usr/local/bin/`, just run the enclosed `Makefile` as
+```
+sudo make install
+```
+
 ## Dependencies
 As the `texrenumber.sh` script relies on `AWK` as its parsing engine, this
 needs to be installed at your workstation (in virtually all cases installed
