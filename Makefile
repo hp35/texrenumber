@@ -16,24 +16,6 @@ define run_and_check
 	exit $$exit_code
 endef
 
-get_formatted_date = $(shell \
-	if date +"%e" >/dev/null 2>&1; then \
-		day=$$(date +"%e" | tr -d ' '); \
-	else \
-		day=$$(date +"%d" | sed 's/^0//'); \
-	fi; \
-	month=$$(date +"%B"); \
-	weekday=$$(date +"%A"); \
-	year=$$(date +"%Y"); \
-	case $$day in \
-	    1|21|31) suffix="st" ;; \
-	    2|22)    suffix="nd" ;; \
-	    3|23)    suffix="rd" ;; \
-	    *)       suffix="th" ;; \
-	esac; \
-	printf "%s %s:%s (%s), %s\n" "$$month" "$$day" "$$suffix" "$$weekday" "$$year" \
-)
-
 all:
 	@echo "Run '' to install the "$(PROJECT)".sh script."
 
