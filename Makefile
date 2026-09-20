@@ -27,5 +27,12 @@ install:
 	$(call run_and_check, ln -s $(TARGET)/$(PROJECT).sh $(TARGET)/$(PROJECT))
 	@echo "Successfully installed the script "$(PROJECT)" at "$(TARGET)" as $$USER"
 
+example:
+	./texrenumber.sh example.tex example-renumbered.tex
+	tex example-renumbered.tex
+	tex example-renumbered.tex
+	dvips -D1200 -ta4 example-renumbered.dvi -o example-renumbered.ps
+	ps2pdf example-renumbered.ps example-renumbered.pdf
+
 clean:
-	-rm -Rf *~
+	-rm -Rf *~ example-renumbered*

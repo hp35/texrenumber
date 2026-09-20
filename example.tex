@@ -1,0 +1,98 @@
+\input eplain.tex
+\centerline{{\tt example.tex}}
+\noindent
+Simple example for testing equation renumbering with {\tt texrenumber.sh}.
+$$
+  {\bf e}_+={{1}\over{\sqrt{2}}}({\bf e}_x+i{\bf e}_y),\qquad
+  {\bf e}_-={{1}\over{\sqrt{2}}}({\bf e}_x-i{\bf e}_y).
+  \eqdef{eq:circbasis10}
+$$
+A forward reference to a later equation yields Eq.~\eqref{eq:waveeq270}, or to
+a subequation ({\tt {\char'134}eqsubdef{\char'173}eq:waveeq260c{\char'175}})
+as Eq.~\eqref{eq:waveeq260c}. Another equation yields
+$$
+  \eqalign{
+   &-{{\partial A^{b\mp}_{\omega_1}}\over{\partial z}}
+       +(k'_1\pm a'_1) {{\partial A^{b\mp}_{\omega_1}}\over{\partial t}}
+       +{{i}\over{2}}(k''_1\pm b''_1)
+            {{\partial^2 A^{b\mp}_{\omega_1}}\over{\partial t^2}}\cr
+    &\hskip90pt
+    =i{{\omega_1 p_1}\over{2cn_1}} A^{f\mp}_{\omega_3} A^{f\pm*}_{\omega_2}
+        \exp(i(k_3-k_2+k_1)z\pm i(\beta_3+\beta_2+\beta_1)z)\cr
+    &\hskip90pt
+    +i{{\omega_1 p_1}\over{2cn_1}} A^{f\mp}_{\omega_3} A^{b\mp*}_{\omega_2}
+        \exp(i(k_3+k_2+k_1)z\pm i(\beta_3+\beta_2+\beta_1)z)\cr
+    &\hskip90pt
+    +i{{\omega_1 p_1}\over{2cn_1}} A^{b\pm}_{\omega_3} A^{f\pm*}_{\omega_2}
+        \exp(-i(k_3+k_2-k_1)z\pm i(\beta_3+\beta_2+\beta_1)z)\cr
+    &\hskip90pt
+    +i{{\omega_1 p_1}\over{2cn_1}} A^{b\pm}_{\omega_3} A^{b\mp*}_{\omega_2}
+        \exp(-i(k_3-k_2-k_1)z\pm i(\beta_3+\beta_2+\beta_1)z).\cr
+  }
+  \eqdef{eq:waveeq210}
+$$
+A set of subequations yield
+$$
+  \eqalignno{
+   &-{{\partial A^{b\mp}_{\omega_1}}\over{\partial z}}
+       +(k'_1\pm a'_1) {{\partial A^{b\mp}_{\omega_1}}\over{\partial t}}
+       +{{i}\over{2}}(k''_1\pm b''_1)
+            {{\partial^2 A^{b\mp}_{\omega_1}}\over{\partial t^2}}\cr
+    &\hskip90pt
+    =i{{\omega_1 p_1}\over{2cn_1}} A^{f\mp}_{\omega_3} A^{f\pm*}_{\omega_2}
+        \exp(i(k_3-k_2+k_1)z\pm i(\beta_3+\beta_2+\beta_1)z),
+  \eqdefn{eq:waveeq260}&\eqsubdef{eq:waveeq260a}\cr
+    &{{\partial A^{f\pm}_{\omega_2}}\over{\partial z}}
+       +(k'_2\mp a'_2) {{\partial A^{f\pm}_{\omega_2}}\over{\partial t}}
+       +{{i}\over{2}}(k''_2\mp b''_2)
+            {{\partial^2 A^{f\pm}_{\omega_2}}\over{\partial t^2}}\cr
+    &\hskip90pt
+    =i{{\omega_2 p_2}\over{2cn_2}} A^{f\mp}_{\omega_3} A^{b\mp*}_{\omega_1}
+        \exp(i(k_3+k_1-k_2)z\pm i(\beta_3+\beta_2+\beta_1)z),
+  &\eqsubdef{eq:waveeq260b}\cr
+    &{{\partial A^{f\mp}_{\omega_3}}\over{\partial z}}
+       +(k'_3\pm a'_3) {{\partial A^{f\mp}_{\omega_3}}\over{\partial t}}
+       +{{i}\over{2}}(k''_3\pm b''_3)
+            {{\partial^2 A^{f\mp}_{\omega_3}}\over{\partial t^2}}\cr
+    &\hskip90pt
+    =i{{\omega_3 p_3}\over{2cn_3}} A^{b\mp}_{\omega_1} A^{f\pm}_{\omega_2}
+        \exp(-i(k_1-k_2+k_3)z\mp i(\beta_3+\beta_2+\beta_1)z).
+  &\eqsubdef{eq:waveeq260c}\cr
+  }
+$$
+We adopt the short-hand notation in Eqs.~\eqref{eq:waveeq260}, comprising
+Eq.~\eqref{eq:waveeq260a}, Eq.~\eqref{eq:waveeq260b}, and
+Eq.~\eqref{eq:waveeq260c}, as
+$$
+  \Delta k=k_3-k_2+k_1,\qquad\Delta\alpha=\beta_3+\beta_2+\beta_1,
+  \eqdef{eq:waveeq270}
+$$
+and conclude the derivation of the equations for the field envelopes by
+summarizing them as
+$$
+  \eqalignno{
+    -{{\partial A^{b\mp}_{\omega_1}}\over{\partial z}}
+       +(k'_1\pm a'_1) {{\partial A^{b\mp}_{\omega_1}}\over{\partial t}}
+       +{{i}\over{2}}(k''_1\pm b''_1)
+            {{\partial^2 A^{b\mp}_{\omega_1}}\over{\partial t^2}}
+    &=i{{\omega_1 p_1}\over{2cn_1}} A^{f\mp}_{\omega_3} A^{f\pm*}_{\omega_2}
+        \exp(i(\Delta k\pm \Delta\alpha)z),
+  \eqdefn{eq:waveeq280}&\eqsubdef{eq:waveeq280a}\cr
+    {{\partial A^{f\pm}_{\omega_2}}\over{\partial z}}
+       +(k'_2\mp a'_2) {{\partial A^{f\pm}_{\omega_2}}\over{\partial t}}
+       +{{i}\over{2}}(k''_2\mp b''_2)
+            {{\partial^2 A^{f\pm}_{\omega_2}}\over{\partial t^2}}
+    &=i{{\omega_2 p_2}\over{2cn_2}} A^{f\mp}_{\omega_3} A^{b\mp*}_{\omega_1}
+        \exp(i(\Delta k\pm\Delta\alpha)z),
+  &\eqsubdef{eq:waveeq280b}\cr
+    {{\partial A^{f\mp}_{\omega_3}}\over{\partial z}}
+       +(k'_3\pm a'_3) {{\partial A^{f\mp}_{\omega_3}}\over{\partial t}}
+       +{{i}\over{2}}(k''_3\pm b''_3)
+            {{\partial^2 A^{f\mp}_{\omega_3}}\over{\partial t^2}}
+    &=i{{\omega_3 p_3}\over{2cn_3}} A^{b\mp}_{\omega_1} A^{f\pm}_{\omega_2}
+        \exp(-i(\Delta k\pm\Delta\alpha)z).
+  &\eqsubdef{eq:waveeq280c}\cr
+  }
+$$
+
+\bye
