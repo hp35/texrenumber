@@ -10,9 +10,9 @@
 #
 # The input file is never modified.  Equation tags of the forms
 #
-# \eqdef{eq:<tag>}
-# \eqdefn{eq:<tag>}
-# \eqsubdef{eq:<tag><suffix>}
+#     \eqdef{eq:<tag>}
+#     \eqdefn{eq:<tag>}
+#     \eqsubdef{eq:<tag><suffix>}
 #
 # are renumbered consecutively as eq:10, eq:20, eq:30, ... .  Both "\eqdef"
 # and "\eqdefn" consume the next equation number, whereas "\eqsubdef" does
@@ -37,13 +37,12 @@
 # "\eqsubdef" cannot be associated with a preceding "\eqdefn", rather than
 # risking ambiguous or inconsistent renumbering.
 #
-# Example:
-#     ./texnumber opatheory.tex opatheory-numbered.tex
+# Example: ./texnumber example.tex example-renumbered.tex
 #
-# In this example, the original opatheory.tex is left unchanged and leaves
-# it up to the user to replace the original file or not (just as a safety,
-# just in case there are any nasty bugs lurking around in the present bash
-# script).
+# In this example, the original example.tex is left unchanged and leaves it
+# up to the user to replace the original file with example-renumbered.tex or
+# not (just as a precaution, in case there are any nasty bugs lurking around
+# in the present bash script).
 #
 #     Copyright (C) 2026, Fredrik Jonsson
 #
